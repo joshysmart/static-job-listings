@@ -68,8 +68,7 @@
 .listings .filter {
   background: #fff;
   display: flex;
-  padding: 0 1.5rem;
-  padding-bottom: 1rem;
+  padding: 1rem 1.5rem;
   align-items: center;
   justify-content: space-between;
   border-radius: .6rem;
@@ -113,7 +112,7 @@
   font-weight: 700;
   font-size: .8rem;
   background: var(--Light-Grayish-Cyan-Background);
-  margin-top: 1rem;
+  margin: .5rem 0;
   margin-right: 1rem;
   transition: all .4s ease-in-out;
 }

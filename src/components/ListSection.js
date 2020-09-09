@@ -23,20 +23,21 @@ class ListSection extends React.Component {
       display: false,
       jobs: jobsData
     })
-  } else if(e.target.id === "close") {
+  } 
+  else if(e.target.id === "close") {
     const item = e.target.dataset.close;
-    console.log(item)
     this.setState(prevState => {
-      if (prevState.tags.size === 0) {
-        prevState.display = false;
-        prevState.jobs = jobsData;
-      }
       const jobs = jobsData.filter(job => {
         return [...prevState.tags].every(tag => {
           return job.role === tag || job.level === tag || job.languages.includes(tag) || job.tools.includes(tag)
         })
       });
       prevState.tags.delete(item);
+      if (prevState.tags.size === 0) {
+        prevState.display = false;
+        prevState.jobs = jobsData;
+        console.log(item)
+      }
       return {jobs}
     }) 
   } else {
