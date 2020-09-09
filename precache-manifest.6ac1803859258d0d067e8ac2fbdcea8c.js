@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0757f6669c886c24c61abcf248ce084c",
+    "revision": "26ebcea2cbbc39c1ce063eba34049c3d",
     "url": "/static-job-listings/index.html"
   },
   {
-    "revision": "85458c9e6fc2772d876a",
-    "url": "/static-job-listings/static/css/main.99ea7b15.chunk.css"
+    "revision": "6c6991516bda32e8522d",
+    "url": "/static-job-listings/static/css/main.c7839e64.chunk.css"
   },
   {
     "revision": "d0b43cc960f6a36b4765",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static-job-listings/static/js/2.b8fb0617.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "85458c9e6fc2772d876a",
+    "revision": "6c6991516bda32e8522d",
     "url": "/static-job-listings/static/js/main.b96a62ba.chunk.js"
   },
   {
