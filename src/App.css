@@ -146,6 +146,12 @@
  box-shadow: 0 15px 35px -20px #5ba4a4;
 }
 
+@media only screen and (min-width: 375px) {
+ .listings .listing {
+  padding-top: 3.5rem;
+ } 
+}
+
 @media only screen and (min-width: 1280px) {
  .listings .listing {
   padding: 1rem 2rem;
@@ -188,7 +194,7 @@
  height: 3rem;
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 375px) {
  .listings .listing .details .logo img{
   width: 5.4rem;
   height: 5.4rem;
