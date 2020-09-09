@@ -26,13 +26,13 @@ class ListSection extends React.Component {
   } 
   else if(e.target.id === "close") {
     const item = e.target.dataset.close;
+    prevState.tags.delete(item);
     this.setState(prevState => {
       const jobs = jobsData.filter(job => {
         return [...prevState.tags].every(tag => {
           return job.role === tag || job.level === tag || job.languages.includes(tag) || job.tools.includes(tag)
         })
       });
-      prevState.tags.delete(item);
       if (prevState.tags.size === 0) {
         prevState.display = false;
         prevState.jobs = jobsData;
