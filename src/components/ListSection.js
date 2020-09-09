@@ -26,8 +26,8 @@ class ListSection extends React.Component {
   } 
   else if(e.target.id === "close") {
     const item = e.target.dataset.close;
-    prevState.tags.delete(item);
     this.setState(prevState => {
+      prevState.tags.delete(item);
       const jobs = jobsData.filter(job => {
         return [...prevState.tags].every(tag => {
           return job.role === tag || job.level === tag || job.languages.includes(tag) || job.tools.includes(tag)
