@@ -1,13 +1,15 @@
+
 import React from 'react';
 
 class Listing extends React.Component {
  render () {
   const style = {
    "disp": {
-    "borderLeft":  this.props.job.featured && "5px solid #5ba4a4"
+    "borderLeft": this.props.job.featured && "5px solid #5ba4a4"
    },
 
-   "display": {"display": !this.props.job.featured && "none"}
+   "displayNew": {"display": !this.props.job.new && "none"},
+   "displayFeatured": {"display": !this.props.job.featured && "none"}
   }
 
   const jobLanguages = this.props.job.languages.map(lang => 
@@ -24,12 +26,12 @@ class Listing extends React.Component {
   return (
    <div className="listing" style={style.disp}>
     <div className="details">
-     <div className="logo"><img src={this.props.job.logo} alt="" /></div>
+      <img className="logo" src={this.props.job.logo} alt="" />
      <div>     
       <div className="info">
        <p className="company">{this.props.job.company}</p>
-       <p className="new" style={style.display}>{this.props.job.new  && "New!"}</p>
-       <p className="featured" style={style.display}>{this.props.job.featured && "Featured"}</p>
+       <p className="new" style={style.displayNew}>{this.props.job.new && "New!"}</p>
+       <p className="featured" style={style.displayFeatured}>{this.props.job.featured && "Featured"}</p>
       </div>
       <h2 className="position">{this.props.job.position}</h2>
       <div className="post-info">
