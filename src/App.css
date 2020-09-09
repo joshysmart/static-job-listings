@@ -7,23 +7,10 @@
  box-sizing: border-box;
 }
 
-.listings .listing button {
- padding: .5rem .5rem;
- margin: .5rem 1rem .5rem 0;
- color: var(--Desaturated-Dark-Cyan);
- font-family: 'Spartan', sans-serif;
- font-weight: 700;
- font-size: .8rem;
- background: var(--Light-Grayish-Cyan-Background);
- border: 0;
- border-radius: .3rem;
- cursor: url('./cursor.svg'), auto;
- transition: all .5s ease-in-out;
-}
-
-.listings .listing button:hover {
- background: var(--Desaturated-Dark-Cyan);
- color: #fff;
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--Light-Grayish-Cyan-Background);
 }
 
 .header {
@@ -32,14 +19,17 @@
  background: var(--Desaturated-Dark-Cyan);
 }
 
+.header .mobile {
+  width: 100%;
+ } 
+
 .header .desktop {
+ width: 100%;
  display: none;
 }
 
 @media only screen and (min-width: 768px) {
  .header .desktop {
-  width: 100%;
-  height: 100%;
   display: inline-block;
  }
  .header .mobile {
@@ -59,6 +49,12 @@
 }
 
 @media only screen and (min-width: 768px) {
+ .listings {
+  padding: 4.5rem 5rem;
+ } 
+}
+
+@media only screen and (min-width: 1280px) {
  .listings {
   padding: 4.5rem 10rem;
  } 
@@ -83,13 +79,19 @@
 }
 
 @media only screen and (min-width: 768px) {
+ .listings .filter {
+   right: 5rem;
+   left: 5rem;
+ } 
+}
+
+@media only screen and (min-width: 1280px) {
   .listings .filter {
     right: 10rem;
     left: 10rem;
   } 
  }
  
-
 .listings .filter .clear{
   color: var(--Desaturated-Dark-Cyan);
   font-size: .8rem;
@@ -142,7 +144,7 @@
  box-shadow: 0 15px 35px -20px #5ba4a4;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
  .listings .listing {
   padding: 1rem 2rem;
   flex-direction: row;
@@ -158,12 +160,11 @@
  border-bottom: 1px solid #c0c2c1;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
  .listings .listing .details  {
   width: 50%;
   flex-direction: row;
   align-items: center;
-  /* justify-content: space-between; */
   border-bottom: 0;
   } 
 }
@@ -174,7 +175,7 @@
  margin-right: 2rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
  .listings .listing .details .logo {
   position: static;
  } 
@@ -185,7 +186,7 @@
  height: 3rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
  .listings .listing .details .logo img{
   width: 5.4rem;
   height: 5.4rem;
@@ -205,7 +206,7 @@
  color: var(--Desaturated-Dark-Cyan);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
  .listings .listing .details .info .company{
   font-size: 15px;
  } 
@@ -246,7 +247,7 @@
  color: var(--Desaturated-Dark-Cyan);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
  .listings .listing .details h2{
   font-size: 1.15rem;
  } 
@@ -261,7 +262,7 @@
  margin: 0 .5rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
  .listings .listing .details .post-info .bullet{
  margin: 0 1rem;
  } 
@@ -278,7 +279,7 @@
  color: var(--Dark-Grayish-Cyan);
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1280px) {
  .listings .listing .details .post-info{
   font-size: 15px;
   padding: .0;
@@ -290,9 +291,28 @@
 }
 
 .listings .listing .job-tags{
- /* width: 100%; */
  margin-top: .5rem;
  display: flex;
  flex-wrap: wrap;
  align-items: center;
 }
+
+.listings .listing .job-tags button {
+  padding: .5rem .5rem;
+  margin: .5rem 1rem .5rem 0;
+  color: var(--Desaturated-Dark-Cyan);
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  font-size: .8rem;
+  background: var(--Light-Grayish-Cyan-Background);
+  border: 0;
+  border-radius: .3rem;
+  cursor: url('./cursor.svg'), auto;
+  transition: all .5s ease-in-out;
+ }
+ 
+ .listings .listing .job-tags button:hover {
+  background: var(--Desaturated-Dark-Cyan);
+  color: #fff;
+ }
+ 
